@@ -1,12 +1,12 @@
 <h1>WebService Using AXIOS (React)</h1>
-Using JSON placeholder website https://jsonplaceholder.typicode.com/
+Using JSON placeholder website https://jsonplaceholder.typicode.com/<br>
 calling - https://jsonplaceholder.typicode.com/posts
 
 
-######Getting a resource
-fetch('https://jsonplaceholder.typicode.com/posts')
-  .then(response => response.json())
-  .then(json => console.log(json))
+<h6>Getting a resource</h6>
+fetch('https://jsonplaceholder.typicode.com/posts')<br>
+  .then(response => response.json())<br>
+  .then(json => console.log(json))<br>
 
 *Output*
 {
@@ -16,7 +16,7 @@ fetch('https://jsonplaceholder.typicode.com/posts')
   userId: 1
 }
 
-######Listing all resources
+<h6>Listing all resources</h6>
 fetch('https://jsonplaceholder.typicode.com/posts')
   .then((response) => response.json())
   .then((json) => console.log(json));
@@ -31,7 +31,7 @@ fetch('https://jsonplaceholder.typicode.com/posts')
 ];
 
 
-######Creating a resource
+<h6>Creating a resource</h6>
 fetch('https://jsonplaceholder.typicode.com/posts', {
   method: 'POST',
   body: JSON.stringify({
@@ -55,7 +55,7 @@ fetch('https://jsonplaceholder.typicode.com/posts', {
 }
 
 
-######Updating a resource
+<h6>Updating a resource</h6>
 fetch('https://jsonplaceholder.typicode.com/posts/1', {
   method: 'PUT',
   body: JSON.stringify({
@@ -80,7 +80,7 @@ fetch('https://jsonplaceholder.typicode.com/posts/1', {
 }
 
 
-######Patching a resource
+<h6>Patching a resource</h6>
 fetch('https://jsonplaceholder.typicode.com/posts/1', {
   method: 'PATCH',
   body: JSON.stringify({
@@ -102,20 +102,20 @@ fetch('https://jsonplaceholder.typicode.com/posts/1', {
 }
 
 
-######Deleting a resource
+<h6>Deleting a resource</h6>
 fetch('https://jsonplaceholder.typicode.com/posts/1', {
   method: 'DELETE',
 });
 
 
-######Filtering resources
+<h6>Filtering resources</h6>
 // This will return all the posts that belong to the first user
 fetch('https://jsonplaceholder.typicode.com/posts?userId=1')
   .then((response) => response.json())
   .then((json) => console.log(json));
 
 
-######Listing nested resources
+<h6>Listing nested resources</h6>
 // This is equivalent to /comments?postId=1
 fetch('https://jsonplaceholder.typicode.com/posts/1/comments')
   .then((response) => response.json())
